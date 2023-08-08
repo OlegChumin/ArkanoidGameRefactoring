@@ -1,11 +1,7 @@
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
+package arkanoid_game.production;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 
 // Base from: http://www.edu4java.com/en/game/game1.html
@@ -69,7 +65,7 @@ public class ArkanoidGameStart extends JPanel { //создаем класс и �
 			}
 			start_game = false;
 			game.text.start_label.setText("");
-			game.text.level_label.setText("LEVEL "+Levels.current_level);
+			game.text.level_label.setText("LEVEL "+ Levels.current_level);
 		}
 		else {
 			if (!paused) {

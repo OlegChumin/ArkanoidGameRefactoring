@@ -1,17 +1,15 @@
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics2D;
+package arkanoid_game.production;
 
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
+import java.awt.*;
 
 public class Text {
 	public static int menu_bar_height = 25;
-	JLabel start_label = new JLabel("Level "+Levels.current_level+", Click To Start", SwingConstants.CENTER);
+	JLabel start_label = new JLabel("Level "+ Levels.current_level+", Click To Start", SwingConstants.CENTER);
 	JLabel rewards_label = new JLabel("", SwingConstants.CENTER);
 	JLabel lives_text_label = new JLabel("|| Lives: ");
 	JLabel lives_label = new JLabel("");
-	JLabel level_label = new JLabel("LEVEL "+Levels.current_level, SwingConstants.CENTER);
+	JLabel level_label = new JLabel("LEVEL "+ Levels.current_level, SwingConstants.CENTER);
 	Font lfont = new Font("courier", Font.PLAIN, 13);
 	Font rwdfont = new Font("courier", Font.BOLD, 17);
 	Font lvlfont = new Font("courier", Font.BOLD, 13);

@@ -1,3 +1,5 @@
+package arkanoid_game.origin;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;

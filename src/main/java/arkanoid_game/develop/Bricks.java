@@ -1,6 +1,6 @@
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
+package arkanoid_game.develop;
+
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Bricks {

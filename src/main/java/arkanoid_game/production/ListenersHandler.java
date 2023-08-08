@@ -1,8 +1,6 @@
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+package arkanoid_game.production;
+
+import java.awt.event.*;
 
 public class ListenersHandler {
 	private ArkanoidGameStart game;

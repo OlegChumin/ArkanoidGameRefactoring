@@ -1,6 +1,6 @@
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
+package arkanoid_game.production;
+
+import java.awt.*;
 
 
 public class Ball {
@@ -61,9 +61,9 @@ public class Ball {
 				ball_right_position = x+DIAMETER+14;
 				ball_left_position = x;
 				brick_top_position = game.brick.bricks.get(brick).y+1;
-				brick_bot_position = game.brick.bricks.get(brick).y+Bricks.Brick.height-1;
+				brick_bot_position = game.brick.bricks.get(brick).y+ Bricks.Brick.height-1;
 				brick_right_position = game.brick.bricks.get(brick).x+14;
-				brick_left_position = game.brick.bricks.get(brick).x+Bricks.Brick.width;
+				brick_left_position = game.brick.bricks.get(brick).x+ Bricks.Brick.width;
 				// Change ball's direction
 				if ((ball_bot_position == brick_top_position || ball_top_position == brick_bot_position) && ball_right_position != brick_left_position && ball_left_position != brick_right_position) {
 					if (ya == 1)
