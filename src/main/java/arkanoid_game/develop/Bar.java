@@ -1,18 +1,24 @@
 package arkanoid_game.develop;
 
+/**
+ * Этот класс описывает поведение и отображение игровой панели (платформы) в игре Arkanoid. В коде объявлены параметры
+ * панели, методы для ее перемещения, рисования и обработки жизней. Также предоставляются методы для получения границ
+ * панели и ее частей.
+ *
+ * */
 import java.awt.*;
 
 public class Bar {
-	public static final int Y = 40;
-	public static int WIDTH = 30;
-	public static int HEIGHT = 10;
-	public static int SIDE_WIDTH = 20;
-	public static Color bar_main_color = Color.WHITE;
-	public static Color bar_side_color = Color.GRAY;
-	public int lives = 3;
-	public static int default_x = 197;
-	public int x = default_x;
-	public int move_speed = 10;
+	public static final int Y = 40;  // Вертикальное расположение панели (Bar)
+	public static int WIDTH = 30; // Ширина панели (Bar)
+	public static int HEIGHT = 10; // Высота панели (Bar)
+	public static int SIDE_WIDTH = 20; // Ширина боковых частей панели (Bar)
+	public static Color bar_main_color = Color.WHITE; // Основной цвет панели
+	public static Color bar_side_color = Color.GRAY;  // Цвет боковых частей панели
+	public int lives = 3; // Количество жизней
+	public static int default_x = 197; // Начальное положение панели по горизонтали
+	public int x = default_x;  // Текущее положение панели по горизонтали
+	public int move_speed = 10;  // Скорость движения панели (Bar)
 
 	private ArkanoidGameStart game;
 
@@ -21,6 +27,7 @@ public class Bar {
 	}
 
 
+	// Метод для перемещения панели (Bar)
 	void move(int direction) {
 		// left & right arrows
 		int width_margin = 5;
@@ -36,7 +43,8 @@ public class Bar {
 		}
 
 	}
-	
+
+	// Метод для уменьшения количества жизней
 	public static void looseLive(ArkanoidGameStart game) {
 		game.bar.lives--;
 		ArkanoidGameStart.start_game = true;
@@ -51,6 +59,7 @@ public class Bar {
 		game.rewards.stopAllRewards();
 	}
 
+	// Метод для рисования панели
 	public void paint(Graphics2D g) {
 		// Left side
 		g.setColor(bar_side_color);
@@ -62,19 +71,21 @@ public class Bar {
 		g.setColor(bar_main_color);
 		g.fillRect(x, game.getHeight()-Y, WIDTH, HEIGHT);
 	}
-	
+
+	// Метод для получения верхней координаты панели
 	public int getTopY() {
 		return game.getHeight() - Y - HEIGHT;
 	}
-	
+
+	// Метод для получения границ панели
 	public Rectangle getBounds() {
 		return new Rectangle(x, game.getHeight()-Y, WIDTH, HEIGHT);
 	}
-	
+
+	// Методы для получения боковых границ панели
 	public Rectangle getLeftBounds() {
 		return new Rectangle(x-20, game.getHeight()-Y, WIDTH-3, HEIGHT);
 	}
-	
 	public Rectangle getRightBounds() {
 		return new Rectangle(x+20, game.getHeight()-Y, WIDTH-3, HEIGHT);
 	}
