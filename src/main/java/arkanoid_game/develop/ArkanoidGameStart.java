@@ -39,7 +39,7 @@ public class ArkanoidGameStart extends JPanel { //создаем класс и �
     @Override
     public void paint(Graphics g) { // метод, отвечающий за прорисовку игры
         super.paint(g);
-        Graphics2D g2d = (Graphics2D) g; // скоздаём переменную g2d класса Graphics 2D
+        Graphics2D g2d = (Graphics2D) g; // создаём переменную g2d класса Graphics 2D
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         ball.paint(g2d); // рисуем мяч
         bar.paint(g2d); // рисуем платформу
