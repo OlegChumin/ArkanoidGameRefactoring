@@ -1,6 +1,5 @@
 package SOLID;
 
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
 
 public class InterfaceSegregationPrinciple {
 }
